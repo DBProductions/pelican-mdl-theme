@@ -3,11 +3,14 @@
 {% block content %}
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
-            <a href="{{ SITEURL }}/">Home</a>
-            <br>
+            <div class="breadcrumb">
+                <a href="{{ SITEURL }}/">Home</a>
+            </div>
             <ul class="mdl-list">
             {% for tag, articles in tags|sort %}
-                <li class="mdl-list__item"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <small>({{ articles|count }} articles)</small></a></li>
+                <li class="mdl-list__item">
+                    <a class="mdl-navigation__link" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <small>({{ articles|count }} articles)</small></a>
+                </li>
             {% endfor %}
             </ul>
         </div>

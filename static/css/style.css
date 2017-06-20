@@ -50,6 +50,20 @@
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
+.breadcrumb {
+    color: #424242;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.breadcrumb a {
+    color: #424242;
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+
 div.highlight pre {
     margin-left: 10px;
     /*background-color: #222;*/

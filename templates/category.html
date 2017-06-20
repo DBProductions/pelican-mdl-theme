@@ -3,8 +3,9 @@
 {% block content %}
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
-            <a href="{{ SITEURL }}/">Home</a> >> <a href="{{ SITEURL }}/categories.html">Categories</a> >> {{ category }}
-            <br>
+            <div class="breadcrumb">
+                <a href="{{ SITEURL }}/">Home</a> &bull; <a href="{{ SITEURL }}/categories.html">Categories</a> &bull; {{ category }}
+            </div>
             <ul class="mdl-list">
             {% for article in articles %}
                 <li class="mdl-list__item mdl-list__item--two-line">
