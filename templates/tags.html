@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <a href="{{ SITEURL }}/">Home</a>
+            <br>
+            <ul class="mdl-list">
+            {% for tag, articles in tags|sort %}
+                <li class="mdl-list__item"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <small>({{ articles|count }} articles)</small></a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}

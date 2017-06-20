@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col">
+            <ul class="demo-list-two mdl-list">
+            {% for article in articles_page.object_list %}
+                <li class="mdl-list__item mdl-list__item--two-line">
+                    <span class="mdl-list__item-primary-content">
+                      <span><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></span>
+                      <span class="mdl-list__item-sub-title">{{ article.content }}</span>
+                    </span>
+                  </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="mdl-cell mdl-cell--3-col">
+            <ul class="mdl-list">
+            {% for tag, articles in tags %}
+                <li class="mdl-list__item"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}
